@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class DocumentSimilarityFinder {
@@ -25,7 +26,7 @@ public class DocumentSimilarityFinder {
     // Find documents similar to the given text
     public List<String> findSimilarDocuments(String queryText, int topN) {
         Set<String> queryKeywords = extractKeywords(queryText);
-        Map<String, Integer> documentScores = new HashMap<>();
+        final Map<String, Integer> documentScores = new HashMap<>();
 
         // Calculate similarity scores between the query and each document
         for (Map.Entry<String, Set<String>> entry : documentKeywords.entrySet()) {
